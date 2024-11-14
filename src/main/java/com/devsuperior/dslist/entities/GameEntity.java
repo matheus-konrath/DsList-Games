@@ -12,7 +12,7 @@ import java.util.Objects;
 @Data
 @Entity
 @Table(name = "tb_game")
-public class Game {
+public class GameEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,8 +33,8 @@ public class Game {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Game game = (Game) o;
-        return Objects.equals(id, game.id);
+        GameEntity gameEntity = (GameEntity) o;
+        return Objects.equals(id, gameEntity.id);
     }
 
     @Override
